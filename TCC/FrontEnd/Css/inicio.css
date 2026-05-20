@@ -1,541 +1,273 @@
-/* ===== RESET & BASE ===== */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgba(0, 3, 13, 1);
+body{
+    background: #050816;
+    font-family: Arial, sans-serif;
     color: white;
-    font-family: 'Segoe UI', sans-serif;
 }
 
-/* ===== HEADER ===== */
-header {
+/* HEADER */
+header{
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    padding: 16px 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    align-items: center;
+    padding: 25px 70px;
 }
 
-.Logo {
+.Logo{
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-.Logo img {
-    width: 36px;
-    height: 36px;
+.Logo img{
+    width: 35px;
 }
 
-.Logo h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: white;
-    margin: 0;
-}
-
-.Header1 {
+.Header1{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
-.Header1 ul {
-    color: white;
+.Header1 ul{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     list-style: none;
-    gap: 24px;
+    gap: 25px;
     margin: 0;
-    padding: 0;
 }
 
-.Header1 ul li br {
-    display: none;
-}
-
-.Header1 a {
+.Header1 a{
+    color: white;
     text-decoration: none;
-    color: rgba(255,255,255,0.75);
-    font-size: 0.9rem;
-    position: relative;
-    transition: color 0.2s;
+    font-size: 14px;
 }
 
-.Header1 a:hover {
+.roxo{
+    background: #7b2cff;
     color: white;
 }
 
-.Header1 a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background-color: white;
-    transition: 0.3s;
+/* MAIN */
+main{
+    padding: 50px 70px;
 }
 
-.Header1 a:hover::after {
-    width: 100%;
-}
-
-/* Botão Entrar */
-.btn.btn-light {
-    background-color: transparent;
-    color: white;
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 6px;
-    padding: 6px 20px;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: background 0.2s, border-color 0.2s;
-}
-
-.btn.btn-light:hover {
-    background-color: rgba(255,255,255,0.1);
-    border-color: white;
-}
-
-/* Botão Cadastrar */
-.btn.roxo {
-    background-color: #6a0dad;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 6px 20px;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.btn.roxo:hover {
-    background-color: #7b1ec7;
-}
-
-/* ===== MAIN ===== */
-main {
-    padding: 60px 40px 40px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* ===== HERO / INICIO ===== */
-.inicio {
-    margin-bottom: 36px;
-}
-
-.inicio h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1.2;
-    color: white;
-}
-
-.inicio .futuro {
-    color: #a855f7;
-}
-
-.inicio p {
-    margin-top: 18px;
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.65);
-    max-width: 400px;
-    line-height: 1.6;
-}
-
-/* ===== BUSCA + BOTÃO ===== */
-.busca {
-    display: inline-flex;
+.hero{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 8px;
-    padding: 6px 16px;
-    margin-bottom: 12px;
-    width: 280px;
+    gap: 50px;
 }
 
-.busca input {
-    background: transparent;
+.hero-img img{
+    width: 740px;
+    height: auto;
+    max-width: 100%;
+}
+
+/* TEXTO INICIAL */
+.inicio h1{
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.futuro{
+    color: #7b2cff;
+}
+
+.inicio p{
+    width: 550px;
+    margin-top: 20px;
+    color: #b8b8b8;
+}
+
+/* BUSCA */
+.area-busca{
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    align-items: center;
+}
+
+.busca input{
+    width: 370px;
+    background: #11182B;
     border: none;
     outline: none;
-    color: white;
-    font-size: 0.9rem;
-    width: 100%;
-}
-
-.busca input::placeholder {
-    color: rgba(255,255,255,0.4);
-}
-
-.como-funciona {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 8px;
-    color: white;
-    font-size: 0.85rem;
-    padding: 8px 18px;
-    margin-left: 12px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.como-funciona:hover {
-    background-color: rgba(255,255,255,0.14);
-}
-
-.como-funciona i {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.7);
-}
-
-/* ===== DESCRICOES ===== */
-.desc {
-    display: flex;
-    gap: 0;
-    margin-top: 40px;
-    margin-bottom: 50px;
-    border: 1px solid rgba(255,255,255,0.12);
+    padding: 16px;
     border-radius: 12px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.03);
-}
-
-.desc h5 {
-    font-size: 0.95rem;
-    font-weight: 700;
     color: white;
-    margin-bottom: 8px;
 }
 
-.desc p {
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.55);
-    line-height: 1.5;
+.como-funciona{
+    background: #11182B;
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
 }
 
-/* Cada bloco de descrição */
-.desc > * {
-    padding: 24px 28px;
-    border-right: 1px solid rgba(255,255,255,0.1);
+/* CARDS INFO */
+.desc{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.card-desc{
+    background: #11182B;
+    border-radius: 15px;
+    padding: 25px;
     flex: 1;
 }
 
-.desc > *:last-child {
-    border-right: none;
+.card-desc h5{
+    margin-bottom: 10px;
 }
 
-/* Workaround: desc contém h5 e p intercalados — dois pares */
-.desc h5:nth-of-type(1),
-.desc p:nth-of-type(1) { }
+.card-desc p{
+    color: #bcbcbc;
+}
 
-/* ===== PROFISSIONAIS ===== */
-main > h2 {
+/* TITULO */
+h2{
     text-align: center;
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 30px;
+    margin: 70px 0 40px;
+    font-size: 38px;
+    font-weight: bold;
 }
 
-main > h2 span,
-main > h2 {
-    color: white;
+h2 span{
+    color: #7b2cff;
 }
 
-/* Hack: o texto "destaque" fica roxo — usar CSS para colorir a palavra */
-/* Como não há span no HTML, colorimos via ::after workaround
-   Mas o HTML tem "Profissionais em destaque" sem span, então colorimos por JS ou deixamos branco */
-/* Se quiser roxo em "destaque", adicione um span no HTML */
-
-.profissionais {
+/* CARDS PROFISSIONAIS */
+.profissionais{
     display: flex;
-    gap: 40px;
     justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
+    gap: 25px;
 }
 
-/* Cards */
 .marcos,
 .mariana,
-.Carlos.Alvez {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 14px;
-    padding: 24px 20px;
-    width: 200px;
-    min-width: 180px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    position: relative;
+.carlos{
+    background: white;
+    width: 260px;
+    border-radius: 18px;
+    padding: 20px;
+    color: black;
 }
 
-/* Foto de perfil */
-.marcos > img:first-child,
-.mariana > img:first-child,
-.Carlos.Alvez > img:first-child {
-    width: 56px;
-    height: 56px;
+.profissionais > div img:first-child{
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 8px;
-    background: #444;
 }
 
-/* Estrela / rating (simulado via ::before no card) */
-.marcos::after,
-.mariana::after,
-.Carlos.Alvez::after {
-    content: "⭐ 5.0";
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    font-size: 0.7rem;
-    background: rgba(255,200,0,0.15);
-    color: #f5c518;
-    border: 1px solid rgba(255,200,0,0.3);
-    border-radius: 20px;
-    padding: 2px 8px;
+.nome{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.nome {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: white;
-    margin: 0;
+.habilidade{
+    color: #666;
+    font-size: 14px;
 }
 
-.habilidade {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.5);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    margin: 0;
-}
-
-/* Localização */
-.mini-loc {
-    width: 12px;
-    height: 12px;
-    display: inline-block;
-    margin-right: 4px;
-    vertical-align: middle;
-    filter: brightness(0.7);
-}
-
-.marcos p:not(.nome):not(.habilidade):not(.react):not(.node\\.js):not(.python),
-.mariana p:not(.nome):not(.habilidade):not(.CAD):not(.projeto):not(.manufatura),
-.Carlos.Alvez p:not(.nome):not(.habilidade):not(.arduino):not(.iot):not(.circuitos) {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.45);
-    margin: 0;
-    display: inline;
-}
-
-/* Especialidades (tags) */
-.especialidades {
+.localizacao{
     display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
     margin-top: 10px;
-    margin-bottom: 6px;
 }
 
-.especialidades p {
-    font-size: 0.7rem;
-    border-radius: 20px;
-    padding: 3px 10px;
+.localizacao p{
     margin: 0;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+    font-size: 14px;
 }
 
-/* Tags Marcos */
-.react {
-    background: rgba(97, 218, 251, 0.15);
-    color: #61dafb;
-    border: 1px solid rgba(97,218,251,0.3);
+.mini-loc{
+    width: 14px !important;
+    height: 14px !important;
 }
-.react::before { content: "React"; }
 
-.node\.js {
-    background: rgba(104, 160, 99, 0.15);
-    color: #68a063;
-    border: 1px solid rgba(104,160,99,0.3);
+.especialidades{
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
-.node\.js::before { content: "Node.js"; }
 
-.python {
-    background: rgba(255, 215, 0, 0.12);
-    color: #ffd700;
-    border: 1px solid rgba(255,215,0,0.25);
+.especialidades p{
+    background: #ead9ff;
+    color: #7b2cff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin: 0;
 }
-.python::before { content: "Python"; }
 
-/* Tags Mariana */
-.CAD {
-    background: rgba(150, 100, 255, 0.15);
-    color: #b07aff;
-    border: 1px solid rgba(150,100,255,0.3);
-}
-.CAD::before { content: "CAD"; }
-
-.projeto {
-    background: rgba(100, 180, 255, 0.12);
-    color: #64b4ff;
-    border: 1px solid rgba(100,180,255,0.3);
-}
-.projeto::before { content: "Projeto"; }
-
-.manufatura {
-    background: rgba(255, 150, 100, 0.12);
-    color: #ff9664;
-    border: 1px solid rgba(255,150,100,0.3);
-}
-.manufatura::before { content: "Manufatura"; }
-
-/* Tags Carlos */
-.arduino {
-    background: rgba(0, 180, 160, 0.12);
-    color: #00b4a0;
-    border: 1px solid rgba(0,180,160,0.3);
-}
-.arduino::before { content: "Arduino"; }
-
-.iot {
-    background: rgba(100, 180, 255, 0.12);
-    color: #64b4ff;
-    border: 1px solid rgba(100,180,255,0.3);
-}
-.iot::before { content: "IoT"; }
-
-.circuitos {
-    background: rgba(255, 200, 50, 0.12);
-    color: #ffc832;
-    border: 1px solid rgba(255,200,50,0.3);
-}
-.circuitos::before { content: "Circuitos"; }
-
-/* Botão Ver Perfil */
-.ver-perfil {
+.ver-perfil{
     width: 100%;
-    margin-top: 10px;
-    background: linear-gradient(90deg, #6a0dad, #8b2fc9);
-    color: white;
+    margin-top: 20px;
     border: none;
-    border-radius: 8px;
-    padding: 8px 0;
-    font-size: 0.82rem;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.04em;
-    transition: opacity 0.2s;
+    background: #7b2cff;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
-.ver-perfil:hover {
-    opacity: 0.85;
+/* FOOTER */
+.footer{
+    background: #f3f3f3;
+    color: black;
+    margin-top: 90px;
+    padding: 40px 70px;
 }
 
-/* ===== FOOTER ===== */
-.footer {
-    margin-top: 60px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding: 30px 40px 16px;
-}
-
-.footer-top {
-    display: none;
-}
-
-.footer-content {
+.footer-content{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.footer-info h3 {
-    color: #a855f7;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.footer-info p {
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.55);
-    max-width: 280px;
-    line-height: 1.5;
-}
-
-.footer-links {
-    display: flex;
     align-items: center;
 }
 
-.footer-links a {
-    color: rgba(255,255,255,0.55);
-    font-size: 0.82rem;
+.footer-info h3{
+    color: #7b2cff;
+    font-weight: bold;
+}
+
+.footer-info p{
+    width: 350px;
+}
+
+.footer-links a{
     text-decoration: none;
-    transition: color 0.2s;
+    color: #555;
 }
 
-.footer-links a:hover {
-    color: white;
+.footer hr{
+    margin: 30px 0;
 }
 
-footer hr {
-    border: none;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    margin: 12px 0;
-}
-
-.footer-bottom {
+.footer-bottom{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
 }
 
-.footer-bottom p {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.4);
-}
-
-.footer-icons {
+.footer-icons{
     display: flex;
-    gap: 12px;
-    align-items: center;
+    gap: 15px;
 }
 
-.footer-icons img {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0.8);
-    transition: filter 0.2s;
+.footer-icons img{
+    width: 30px;
 }
-
-.footer-icons a:hover img {
-    filter: brightness(1.2);
-}
-
-/* ===== SETAS CARROSSEL (navegação visual) ===== */
-/* As setas < > na imagem são efeito visual — podem ser adicionadas via JS */
