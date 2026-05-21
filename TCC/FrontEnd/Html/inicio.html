@@ -8,6 +8,9 @@
     rel="stylesheet">
   <link rel="stylesheet" href="../Css/inicio.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Nexus page</title>
 </head>
 <body>
@@ -26,8 +29,8 @@
       <li> <a href="">Blog </a> </li>
     </ul>
 
-  <button class="btn btn-light">Entrar</button>
-  <button class= "btn roxo">Cadastrar</button>
+  <button class="btn btn-light" id="Entrar">Entrar</button>
+  <button class= "btn roxo" id="Cadastro" onclick=Cadastro() >Cadastrar</button>
 
 </div>
 </header>
@@ -179,5 +182,82 @@
     </div>
 </footer>
 
+
+<!-- Aqui é a parte do botão de Login -->
+<div class="overlay" id="overlay">
+
+  <form class="login-box">
+    
+    <img src="../img/NexusS.png" 
+         alt="Logo Nexus" 
+         width="100" 
+         height="100">
+
+    <span class="text-black fechar" id="fechar">
+      <h4>X</h4>
+    </span>
+
+    <h2 class="text-black">Bem-vindo de volta</h2>
+    <p class="text-black">
+      Faça login para acessar sua conta
+    </p>
+
+    <div class="loginIN">
+
+      <label for="usuario" class="text-black">
+        Usuário:
+      </label>
+      <input 
+        class="text-white"
+        type="text"
+        id="usuario"
+        name="usuario"
+        placeholder="Ex: Marcos07"
+        autocomplete="email"
+        required>
+
+      <label for="senha" class="text-black">
+        Senha:
+      </label>
+
+      <input 
+        class="text-white"
+        type="password"
+        id="senha"
+        name="senha"
+        placeholder="********"
+        autocomplete="current-password"
+        required>
+
+      <a href="../Html/redsenha.html" class="esqueceu">
+        Esqueceu sua senha?
+      </a>
+
+    </div>
+
+    <br>
+
+    <button 
+      type="submit"
+      class="btn w-100 text-white rounded-pill BotEn">
+      Entrar
+    </button>
+
+    <p class="text-black">
+      Não tem uma conta?
+
+      <a href="../Html/Cadastro.html" class="text-purple">
+        Cadastre-se
+      </a>
+    </p>
+
+  </form>
+
+  </div>
+
+  
+  <script src="../Js/inicio.js"></script>
+
+  
 </body>
 </html>
